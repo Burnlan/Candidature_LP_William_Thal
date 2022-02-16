@@ -1,0 +1,22 @@
+{
+  "name": "candidature_lp_william_thal",
+  "version": "1.0.0",
+  "description": "backend for biscuit fighter",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Burnlan/Candidature_LP_William_Thal.git"
+  },
+  "author": "william thal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Burnlan/Candidature_LP_William_Thal/issues"
+  },
+  "homepage": "https://github.com/Burnlan/Candidature_LP_William_Thal#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
