@@ -6,12 +6,15 @@ span{
     font-size: 1.2rem;
 }
 
-.biscuit {
+.biscuit, .biscuitedit {
     display: flex;
     align-items: center;
 }
-.controls {
+.controls, .biscuitedit {
     & > * {
         margin-left: 1rem;
+    }
+    button{
+        padding: 0.2rem;
     }
 }

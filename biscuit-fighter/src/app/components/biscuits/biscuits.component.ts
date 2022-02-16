@@ -11,7 +11,6 @@ import { BiscuitsService } from 'src/app/services/biscuits.service';
 export class BiscuitsComponent implements OnInit {
   @Input() biscuit!: Biscuit;
   @Output() deleteBiscuit: EventEmitter<Biscuit> = new EventEmitter();
-  @Output() updateBiscuit: EventEmitter<Biscuit> = new EventEmitter();
 
   isEdit = false;
   editBtnText = "Edit";
@@ -48,6 +47,7 @@ export class BiscuitsComponent implements OnInit {
       power: this.power
     }
     this.biscuitservice.updateBiscuit(editedBiscuit).subscribe();
+    window.location.reload();
   }
 
 }

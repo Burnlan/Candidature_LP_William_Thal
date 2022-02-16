@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChange } from '@angular/core';
 import { Biscuit } from 'src/app/Biscuit';
 import { BiscuitsService } from 'src/app/services/biscuits.service';
 
@@ -28,6 +28,8 @@ export class AddBiscuitFormComponent implements OnInit {
 
     this.name = "";
     this.power = 0;
+
+    window.location.reload();
   }
 
 }

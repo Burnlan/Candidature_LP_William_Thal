@@ -36,4 +36,8 @@ export class BiscuitsService {
     return this.http.put<Biscuit>(this.apiUrl+'editbiscuit'+biscuit._id, biscuit, httpOptions)
   }
 
+  fightBiscuits() {
+    return this.http.get<String>(this.apiUrl+'fightbiscuits')
+  }
+
 }

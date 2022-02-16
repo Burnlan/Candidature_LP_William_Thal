@@ -23,6 +23,7 @@ export class BiscuitlistComponent implements OnInit {
   deleteBiscuit(biscuit:Biscuit) {
     //we call the service that deletes biscuits
     this.biscuitservice.deleteBiscuit(biscuit).subscribe();
+    window.location.reload();
   }
 
 

@@ -3,3 +3,13 @@
 h1, h2, h3, h4, h5, input, button, p, span {
     font-family: 'Lato', sans-serif;
 }
+
+button{
+    padding: 1rem;
+    border-radius: 10%;
+    background-color: white;
+    &:hover {
+        cursor: pointer;
+        
+    }
+}

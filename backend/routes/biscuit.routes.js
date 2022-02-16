@@ -11,7 +11,7 @@ router.get('/getbiscuits', biscuitCtrl.getBiscuits);
 router.delete('/deletebiscuit:id', biscuitCtrl.deleteBiscuit);
 router.post('/addbiscuit', biscuitCtrl.addBiscuit);
 router.put('/editbiscuit:id', biscuitCtrl.editBiscuit);
-//router.get('/fightbiscuits', biscuitCtrl.fightBiscuits);
+router.get('/fightbiscuits', biscuitCtrl.fightBiscuit);
 
 //we export everything
 module.exports = router;
