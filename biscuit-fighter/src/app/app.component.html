@@ -1,6 +1,8 @@
 <div id="container">
   <h1>Welcome to Biscuit Fighter !</h1>
-  <p>You can create biscuits, edit biscuits, and delete biscuits.</p>
-  <app-biscuit></app-biscuit>
+  <p>Your biscuits :</p>
+  <app-biscuitlist></app-biscuitlist>
+  <app-add-biscuit-form></app-add-biscuit-form>
   <p>Press this button to make biscuits fight ! (teams are chosen randomly)</p>
+  <button class="fight" (click)="fight()">FIGHT !</button>
 </div>

@@ -1,0 +1,22 @@
+#new-bsc-power {
+    width: 2rem;
+}
+
+span{
+    display: block;
+    font-style: italic;
+    font-weight: 200;
+}
+
+input{
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    background-color: white;
+    &:hover{
+        cursor: pointer;
+    }
+}

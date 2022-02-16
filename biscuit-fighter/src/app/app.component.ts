@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'biscuit-fighter';
+
+  fight() {
+    console.log("fight");
+  }
 }
