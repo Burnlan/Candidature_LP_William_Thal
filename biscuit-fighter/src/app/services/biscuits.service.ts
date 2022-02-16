@@ -3,6 +3,13 @@ import { Biscuit } from 'src/app/Biscuit';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
+//we will use json
+const httpOptions = {
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,6 +26,16 @@ export class BiscuitsService {
 
   deleteBiscuit(biscuit:Biscuit): Observable<Biscuit> {
     return this.http.delete<Biscuit>(this.apiUrl+'deletebiscuit'+biscuit._id)
+  }
+
+  createBiscuit(biscuit:Biscuit): Observable<Biscuit> {
+    console.log(biscuit);
+    return this.http.post<Biscuit>(this.apiUrl+'addbiscuit', biscuit, httpOptions)
+  }
+
+  updateBiscuit(biscuit:Biscuit): Observable<Biscuit> {
+    
+    return this.http.put<Biscuit>(this.apiUrl+'editbiscuit'+biscuit._id, biscuit, httpOptions)
   }
 
 }

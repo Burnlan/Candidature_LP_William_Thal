@@ -2,4 +2,4 @@
 <span>Give it a name and a power value</span>
 <input type="text" name="name" id="new-bsc-name" placeholder="Oréo" [(ngModel)]="name">
 <input type="number" name="power" id="new-bsc-power" placeholder="5" step [(ngModel)]="power">
-<button>Create this biscuit</button>
+<button (click)="createBiscuit()">Create this biscuit</button>

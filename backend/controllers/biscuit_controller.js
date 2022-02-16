@@ -24,11 +24,9 @@ exports.deleteBiscuit = (req, res, next) => {
 
 //add a biscuit
 exports.addBiscuit = (req, res, next) => {
-    //we get the JSON that is sent to the API
-    const data = JSON.parse(req.body.biscuit);
-    //We create a new biscuit using the data
+    //We create a new biscuit using the json data in the request
     const biscuit = new Biscuit({
-        ...data
+        ...req.body
     });
     //now we add the biscuit to the database
     biscuit.save()

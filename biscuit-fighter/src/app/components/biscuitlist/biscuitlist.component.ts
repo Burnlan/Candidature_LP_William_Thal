@@ -24,4 +24,5 @@ export class BiscuitlistComponent implements OnInit {
     this.biscuitservice.deleteBiscuit(biscuit).subscribe();
   }
 
+
 }
