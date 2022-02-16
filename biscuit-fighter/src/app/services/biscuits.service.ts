@@ -17,4 +17,8 @@ export class BiscuitsService {
     return this.http.get<Biscuit[]>(this.apiUrl+'getbiscuits')
   }
 
+  deleteBiscuit(biscuit:Biscuit): Observable<Biscuit> {
+    return this.http.delete<Biscuit>(this.apiUrl+'deletebiscuit'+biscuit._id)
+  }
+
 }

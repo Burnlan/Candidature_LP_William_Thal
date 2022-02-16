@@ -8,9 +8,10 @@ const biscuitCtrl = require('../controllers/biscuit_controller');
 
 //we set all routes for the sauce 
 router.get('/getbiscuits', biscuitCtrl.getBiscuits);
+router.delete('/deletebiscuit:id', biscuitCtrl.deleteBiscuit);
+router.post('/addbiscuit', biscuitCtrl.addBiscuit);
 /*
-router.post('/editbiscuit', biscuitCtrl.editBiscuits);
-router.delete('/deletebiscuit', biscuitCtrl.delBiscuit);
+router.post('/editbiscuit:id', biscuitCtrl.editBiscuits);
 router.get('/fightbiscuits', biscuitCtrl.fightBiscuits);
 */
 

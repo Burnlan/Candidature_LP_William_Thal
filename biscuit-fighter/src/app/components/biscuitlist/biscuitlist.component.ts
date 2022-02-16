@@ -19,4 +19,9 @@ export class BiscuitlistComponent implements OnInit {
     this.biscuitservice.getBiscuits().subscribe((biscuits) => this.biscuits = biscuits);
   }
 
+  deleteBiscuit(biscuit:Biscuit) {
+    //we call the service that deletes biscuits
+    this.biscuitservice.deleteBiscuit(biscuit).subscribe();
+  }
+
 }

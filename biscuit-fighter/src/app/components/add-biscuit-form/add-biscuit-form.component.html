@@ -1,5 +1,5 @@
 <h2>Add a biscuit :</h2>
 <span>Give it a name and a power value</span>
-<input type="text" id="new-bsc-name" placeholder="Oréo">
-<input type="number" id="new-bsc-power" placeholder="5" step>
+<input type="text" name="name" id="new-bsc-name" placeholder="Oréo" [(ngModel)]="name">
+<input type="number" name="power" id="new-bsc-power" placeholder="5" step [(ngModel)]="power">
 <button>Create this biscuit</button>
