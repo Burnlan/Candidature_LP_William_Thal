@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { Biscuit } from 'src/app/Biscuit';
+import { BiscuitsService } from 'src/app/services/biscuits.service';
 
 @Component({
   selector: 'app-biscuitlist',
   templateUrl: './biscuitlist.component.html',
   styleUrls: ['./biscuitlist.component.scss']
 })
+
 export class BiscuitlistComponent implements OnInit {
-  "biscuits" = [
-    {"name": "Oréo", "power": 5},
-    {"name": "Twix", "power": 3},
-  ];
-  constructor() { }
+  biscuits: Biscuit[] = [];
+
+  constructor(private biscuitservice: BiscuitsService) { }
 
   ngOnInit(): void {
+    this.biscuits = this.biscuitservice.getBiscuits()
   }
 
 }
