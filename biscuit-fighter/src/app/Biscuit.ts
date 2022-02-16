@@ -1,7 +1,7 @@
 //we define what a biscuit is
 
 export interface Biscuit {
-    id?: number;
+    _id?: number;
     name: string;
     power: number;
 }

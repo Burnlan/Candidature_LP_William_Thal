@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Biscuit } from 'src/app/Biscuit';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -8,12 +8,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 
 export class BiscuitsService {
+  //We set up the API endpoint URL
   private apiUrl = "http://localhost:8666/";
 
   constructor(private http:HttpClient) { }
-
+  //we call the API 
   getBiscuits(): Observable<Biscuit[]> {
-    console.log(this.http.get<Biscuit[]>(this.apiUrl+'getbiscuits'))
     return this.http.get<Biscuit[]>(this.apiUrl+'getbiscuits')
   }
 

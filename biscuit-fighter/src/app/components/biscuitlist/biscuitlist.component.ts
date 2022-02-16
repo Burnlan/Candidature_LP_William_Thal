@@ -15,6 +15,7 @@ export class BiscuitlistComponent implements OnInit {
   constructor(private biscuitservice: BiscuitsService) { }
 
   ngOnInit(): void {
+    //we call the service that fetches biscuits
     this.biscuitservice.getBiscuits().subscribe((biscuits) => this.biscuits = biscuits);
   }
 

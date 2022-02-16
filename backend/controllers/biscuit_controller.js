@@ -8,7 +8,7 @@ exports.getBiscuits = (req, res, next) => {
         if(err) {
             res.send(err)
         }
-        console.log(biscuits);
+        res.status(200).json(biscuits);
     });
 
 };
