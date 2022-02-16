@@ -29,12 +29,10 @@ export class BiscuitsService {
   }
 
   createBiscuit(biscuit:Biscuit): Observable<Biscuit> {
-    console.log(biscuit);
     return this.http.post<Biscuit>(this.apiUrl+'addbiscuit', biscuit, httpOptions)
   }
 
   updateBiscuit(biscuit:Biscuit): Observable<Biscuit> {
-    
     return this.http.put<Biscuit>(this.apiUrl+'editbiscuit'+biscuit._id, biscuit, httpOptions)
   }
 

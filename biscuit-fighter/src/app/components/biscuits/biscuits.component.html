@@ -1,7 +1,13 @@
 <div class="biscuit">
     <h3>{{ biscuit.name }} <span> level {{ biscuit.power }}</span></h3>
     <div class="controls">
-        <button class="edit">Edit</button>
+        <button (click)="showEditPanel()" class="edit">{{ editBtnText }}</button>
         <button (click)="delete(biscuit)" class="delete">Delete</button>
     </div>
+</div>
+<div class="biscuitedit"*ngIf='isEdit'>
+    <span>Enter new name and power: </span>
+    <input type="text" name="name" id="new-bsc-name" placeholder="Oréo" [(ngModel)]="name">
+    <input type="number" name="power" id="new-bsc-power" placeholder="5" step [(ngModel)]="power">
+    <button (click)="update()" class="edit">Update</button>
 </div>

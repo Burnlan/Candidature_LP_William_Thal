@@ -30,4 +30,15 @@ exports.addBiscuit = (req, res, next) => {
     });
     //now we add the biscuit to the database
     biscuit.save()
+    res.status(200).send();
 };
+
+exports.editBiscuit = (req, res, next) => {
+    //we update the biscuit with the data in the body
+    Biscuit.updateOne({_id: req.params.id}, {...req.body}, function(err) {
+        if(err){
+            res.send(err)
+        }
+        res.status(200).send();
+    })
+}

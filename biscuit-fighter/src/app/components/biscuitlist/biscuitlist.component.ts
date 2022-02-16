@@ -11,6 +11,7 @@ import { BiscuitsService } from 'src/app/services/biscuits.service';
 
 export class BiscuitlistComponent implements OnInit {
   biscuits: Biscuit[] = [];
+  editedBiscuit:Biscuit = {"name": "", "power": 0};
 
   constructor(private biscuitservice: BiscuitsService) { }
 

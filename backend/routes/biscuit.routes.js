@@ -10,10 +10,8 @@ const biscuitCtrl = require('../controllers/biscuit_controller');
 router.get('/getbiscuits', biscuitCtrl.getBiscuits);
 router.delete('/deletebiscuit:id', biscuitCtrl.deleteBiscuit);
 router.post('/addbiscuit', biscuitCtrl.addBiscuit);
-/*
-router.post('/editbiscuit:id', biscuitCtrl.editBiscuits);
-router.get('/fightbiscuits', biscuitCtrl.fightBiscuits);
-*/
+router.put('/editbiscuit:id', biscuitCtrl.editBiscuit);
+//router.get('/fightbiscuits', biscuitCtrl.fightBiscuits);
 
 //we export everything
 module.exports = router;

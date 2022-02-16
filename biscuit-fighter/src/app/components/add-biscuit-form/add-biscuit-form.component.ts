@@ -26,7 +26,6 @@ export class AddBiscuitFormComponent implements OnInit {
     //we call the service
     this.biscuitservice.createBiscuit(newBiscuit).subscribe();
 
-
     this.name = "";
     this.power = 0;
   }
