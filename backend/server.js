@@ -14,6 +14,11 @@ app.use(express.json());
 mongoose.connect(db)
     .then(() => console.log("connected to the database"));
 
+//setup the routes
+const biscuitRoutes = require('./routes/biscuit.routes');
+app.use("/", biscuitRoutes);
+
 const server = app.listen(8666, function(){
     console.log("listening to requests on port 8666");
 });
+
