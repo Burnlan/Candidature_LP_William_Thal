@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Biscuit } from 'src/app/Biscuit';
 
 @Component({
   selector: 'app-biscuits',
@@ -6,14 +7,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./biscuits.component.scss']
 })
 export class BiscuitsComponent implements OnInit {
-  @Input() name = "";
-  @Input() power = "";
+  @Input() biscuit!: Biscuit;
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
   }
-
   
-
 }
