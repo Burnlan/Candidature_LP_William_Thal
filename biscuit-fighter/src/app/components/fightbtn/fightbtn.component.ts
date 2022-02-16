@@ -18,7 +18,6 @@ export class FightbtnComponent implements OnInit {
   fight() {
     //we call the service that makes biscuits fight
     this.biscuitservice.fightBiscuits().subscribe((result) => this.fightResult = result);
-    console.log(this.fightResult);
   }
 
 }
