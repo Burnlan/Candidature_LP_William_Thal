@@ -7,4 +7,4 @@ const biscuitSchema = mongoose.Schema({
 });
 
 
-module.exports = mongoose.model("Biscuit", biscuitSchema);
+module.exports = mongoose.model("Biscuit", biscuitSchema, "Biscuits");
